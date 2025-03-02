@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbershop</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    	</script>
+    	<script type="text/javascript">
+       		(function(){
+            	emailjs.init({
+            	publicKey: "wFo046lbjL4s1KFya",
+            	});
+        	})();
+    	</script>
+
+</head>
+<body>
+    <section id="home">
+        <div class="hero">
+            <div class="navBar">
+                <li><a onclick="scrollInto('home')">Home</a></li>
+                <li><a onclick="scrollInto('about')">Über uns</a></li>
+                <li><a onclick="scrollInto('galerie')">Galerie</a></li>
+                <li><a onclick="scrollInto('bewertungen')">Bewertungen</a></li>
+            </div>
+            <img src="hero1.jpg" class="heroImage">
+            <img src="logo.png">
+
+            <button onclick="openPopup()">Termin vereinbaren!</button>
+
+            <div class="overlay" id="overlay"></div>
+            <div class="popup" id="popup">
+                <h2>Terminvereinbarung</h2>
+                <p>Rufen Sie uns an unter:</p>
+                <p style="font-size: 24px; font-weight: bold;">+49 123 456 789</p>
+                <p>Um Ihren Termin zu vereinbaren, rufen Sie bitte die oben angegebene Nummer an.</p>
+                <button onclick="closePopup()">Schließen</button>
+            </div>
+
+            <h3>Elias Barber & Beauty - Mehr als nur ein Haarschnitt, ein Erlebnis!</h3>
+        </div>
+    </section>
+
+
+    <section id="about">
+        <div class="divider"></div>
+        <h1>Über uns</h1>
+        <p>Bei Elias Barber & Beauty geht es nicht nur um Haarschnitte – es geht um Stil, Persönlichkeit und Perfektion. Unser Team aus erfahrenen Stylisten sorgt dafür, dass jeder Kunde den perfekten Look erhält. Tauchen Sie ein in die Welt der klassischen Barbierkunst mit einem modernen Touch.</p>
+
+        <button onclick="openPopup()">Termin vereinbaren!</button>
+
+        <div class="overlay" id="overlay"></div>
+        <div class="popup" id="popup">
+            <h2>Terminvereinbarung</h2>
+            <p>Rufen Sie uns an unter:</p>
+            <p style="font-size: 24px; font-weight: bold;">+49 123 456 789</p>
+            <p>Um Ihren Termin zu vereinbaren, rufen Sie bitte die oben angegebene Nummer an.</p>
+            <button onclick="closePopup()">Schließen</button>
+        </div>
+
+        <div class="divider"></div>
+    </section>
+
+    <section id="galerie">
+        <h1>Galerie</h1>
+        <p>Ein Bild sagt mehr als tausend Worte – überzeugen Sie sich selbst von unseren präzisen Schnitten und kreativen Styles.</p>
+        <div class="gallery-container">
+            <img src="cut1.jpg" alt="Haarschnitt 1">
+            <img src="cut2.jpg" alt="Haarschnitt 2">
+            <img src="cut3.jpg" alt="Haarschnitt 3">
+            <img src="cut4.jpg" alt="Haarschnitt 4">
+            <img src="cut5.jpg" alt="Haarschnitt 5">
+            <img src="cut6.jpg" alt="Haarschnitt 6">
+
+            <img src="cut1.jpg" alt="Haarschnitt 1">
+            <img src="cut2.jpg" alt="Haarschnitt 2">
+            <img src="cut3.jpg" alt="Haarschnitt 3">
+            <img src="cut4.jpg" alt="Haarschnitt 4">
+            <img src="cut5.jpg" alt="Haarschnitt 5">
+            <img src="cut6.jpg" alt="Haarschnitt 6">
+        </div>
+        <div class="divider"></div>
+    </section>
+
+
+    <section id="bewertungen">
+        <h1>Bewertungen</h1>
+        <p>Unsere Kunden sprechen für uns! Lesen Sie, was sie über ihren Besuch bei uns sagen:</p>
+        <div class="review">
+            
+            <svg width="150" height="30" viewBox="0 0 150 30" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <symbol id="star" viewBox="0 0 24 24" fill="#FFD700">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.86L12 17.77l-6.18 3.23L7 14.14 2 9.27l6.91-1.01z"/>
+                    </symbol>
+                </defs>
+                <use xlink:href="#star" x="0" y="0" width="30" height="30"/>
+                <use xlink:href="#star" x="30" y="0" width="30" height="30"/>
+                <use xlink:href="#star" x="60" y="0" width="30" height="30"/>
+                <use xlink:href="#star" x="90" y="0" width="30" height="30"/>
+                <use xlink:href="#star" x="120" y="0" width="30" height="30"/>
+            </svg>
+
+            <p>"Der beste Barber in der Stadt! Exzellenter Service und unschlagbare Qualität!" - Max M.</p>
+        </div>
+        <div class="review">
+
+            <svg width="150" height="30" viewBox="0 0 150 30" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <symbol id="star" viewBox="0 0 24 24" fill="#FFD700">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.86L12 17.77l-6.18 3.23L7 14.14 2 9.27l6.91-1.01z"/>
+                    </symbol>
+                </defs>
+                <use xlink:href="#star" x="0" y="0" width="30" height="30"/>
+                <use xlink:href="#star" x="30" y="0" width="30" height="30"/>
+                <use xlink:href="#star" x="60" y="0" width="30" height="30"/>
+                <use xlink:href="#star" x="90" y="0" width="30" height="30"/>
+                <use xlink:href="#star" x="120" y="0" width="30" height="30"/>
+            </svg>
+
+            <p>"Hier bekommt man nicht nur einen Haarschnitt, sondern ein echtes Verwöhnerlebnis!" - Anna L.</p>
+        </div>
+
+        <div class="review">
+
+            <svg width="150" height="30" viewBox="0 0 150 30" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <symbol id="star" viewBox="0 0 24 24" fill="#FFD700">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.86L12 17.77l-6.18 3.23L7 14.14 2 9.27l6.91-1.01z"/>
+                    </symbol>
+                </defs>
+                <use xlink:href="#star" x="0" y="0" width="30" height="30"/>
+                <use xlink:href="#star" x="30" y="0" width="30" height="30"/>
+                <use xlink:href="#star" x="60" y="0" width="30" height="30"/>
+                <use xlink:href="#star" x="90" y="0" width="30" height="30"/>
+                <use xlink:href="#star" x="120" y="0" width="30" height="30"/>
+            </svg>
+
+            <p>"Immer top geschnitten – der beste Barbershop in der Stadt!" - Peter N.</p>
+        </div>
+
+        <div class="review">
+
+            <svg width="150" height="30" viewBox="0 0 150 30" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <symbol id="star" viewBox="0 0 24 24" fill="#FFD700">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.86L12 17.77l-6.18 3.23L7 14.14 2 9.27l6.91-1.01z"/>
+                    </symbol>
+                </defs>
+                <use xlink:href="#star" x="0" y="0" width="30" height="30"/>
+                <use xlink:href="#star" x="30" y="0" width="30" height="30"/>
+                <use xlink:href="#star" x="60" y="0" width="30" height="30"/>
+                <use xlink:href="#star" x="90" y="0" width="30" height="30"/>
+                <use xlink:href="#star" x="120" y="0" width="30" height="30"/>
+            </svg>
+
+            <p>"Ich gehe nie wieder woanders hin – hier stimmt einfach alles!" - Julian P.</p>
+        </div>
+
+        <div class="review">
+
+            <svg width="150" height="30" viewBox="0 0 150 30" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <symbol id="star" viewBox="0 0 24 24" fill="#FFD700">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.86L12 17.77l-6.18 3.23L7 14.14 2 9.27l6.91-1.01z"/>
+                    </symbol>
+                </defs>
+                <use xlink:href="#star" x="0" y="0" width="30" height="30"/>
+                <use xlink:href="#star" x="30" y="0" width="30" height="30"/>
+                <use xlink:href="#star" x="60" y="0" width="30" height="30"/>
+                <use xlink:href="#star" x="90" y="0" width="30" height="30"/>
+                <use xlink:href="#star" x="120" y="0" width="30" height="30"/>
+            </svg>
+
+            <p>"Beste Beratung und der Schnitt sitzt jedes Mal perfekt!" - Maria A.</p>
+        </div>
+
+        <button onclick="openPopup()">Termin vereinbaren!</button>
+
+        <div class="overlay" id="overlay"></div>
+        <div class="popup" id="popup">
+            <h2>Terminvereinbarung</h2>
+            <p>Rufen Sie uns an unter:</p>
+            <p style="font-size: 24px; font-weight: bold;">+49 123 456 789</p>
+            <p>Um Ihren Termin zu vereinbaren, rufen Sie bitte die oben angegebene Nummer an.</p>
+            <button onclick="closePopup()">Schließen</button>
+        </div>
+    </section>
+
+    <footer>
+
+        <form class="contact-form" id="contactForm" onsubmit="sendMail(); return false;">
+            <h3>Kontaktformular</h3>
+            <label>Name *:</label>
+            <input id="username" type="text" placeholder="Max Mustermann" required>
+            <br>
+            <label>Email *:</label>
+            <input id="email" type="email" placeholder="max.mustermann@mail.ext">
+            <br>
+            <label>Text  *:</label>
+            <input id="content" type="text" placeholder="Deine Nachricht" required>
+            <br>
+            <button type="submit">Kontaktieren</button>
+        </form>
+
+        <div class="divider"></div>
+
+        <p>© 2024 Elias Barber & Beauty | Kontakt: 0123-456789</p>
+        <p>Besuchen Sie uns auf Social Media:</p>
+        <div class="socials">
+            <a href="https://www.instagram.com/elias_barber_beauty/">Instagram</a>
+            <a href="C:\Users\hundt\Downloads\site\site\impressum.html">Impressum</a>
+            <a href="C:\Users\hundt\Downloads\site\site\datenschutz.html">Datenschutz</a>
+        </div>
+    </footer>
+</body>
+</html>
